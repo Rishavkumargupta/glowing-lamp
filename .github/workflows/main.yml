@@ -1,4 +1,4 @@
-name: Maven Packages
+name: Maven Package
 
 on:
   push:
