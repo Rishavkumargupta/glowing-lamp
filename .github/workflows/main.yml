@@ -1,9 +1,11 @@
 name: Maven Package
 
 on:
-  push:
-    branches:
-     - main
+  workflow_dispatch:
+    inputs:
+      issue-key:
+        description: 'Issue Key'
+        required: true
 
 jobs:
   build-maven-dev:
@@ -20,5 +22,5 @@ jobs:
       id: transition
       uses: atlassian/gajira-transition@master
       with:
-        issue: PROJ-34
+        issue: ${{ github.event.inputs.issue-key }}
         transition: "In progress"
