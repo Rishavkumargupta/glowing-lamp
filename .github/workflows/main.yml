@@ -20,5 +20,5 @@ jobs:
       id: transition
       uses: atlassian/gajira-transition@master
       with:
-        issue: GA-1
+        issue: PROJ-34
         transition: "In progress"
